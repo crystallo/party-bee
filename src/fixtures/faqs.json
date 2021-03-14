@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "header": "Sample Question 1?",
+    "body": "Sample answer for question 1."
+  },
+  {
+    "id": 2,
+    "header": "Sample Question 2?",
+    "body": "Sample answer for question 2."
+  },
+  {
+    "id": 3,
+    "header": "Sample Question 3?",
+    "body": "Sample answer for question 3."
+  }
+]
