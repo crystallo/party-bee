@@ -4,6 +4,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import emailjs from 'emailjs-com';
 import apiKeys from '../../constants/apikeys';
 
+import './style.css';
+
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +28,7 @@ const ContactUs = () => {
   return (
     <section className="contact-us">
       <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="contact-us-form" onSubmit={handleSubmit}>
         <label for="name">Name</label>
         <input 
           name="name" 
@@ -68,6 +70,7 @@ const ContactUs = () => {
           type="text" 
           value={message} 
           onChange={e => setMessage(e.target.value)} 
+          rows="5"
         />
 
         <button type="submit">Submit</button>

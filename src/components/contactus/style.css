@@ -1,0 +1,15 @@
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  width: 570px;
+  max-width: 80%;
+  padding: 3em;
+  border-radius: 25px;
+  box-shadow: 0 0 5px lightgrey;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
