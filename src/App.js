@@ -5,12 +5,17 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 import Header from './components/header';
 import ContactUs from './components/contactus';
 import Faqs from './components/faqs';
 import About from './components/about';
+import Footer from './components/footer';
 import * as ROUTES from './constants/routes';
+
+library.add(fab);
 
 function App() {
   return (
@@ -27,6 +32,7 @@ function App() {
             <Faqs />
           </Route>
         </Switch>
+      <Footer />
     </Router>
   );
 }

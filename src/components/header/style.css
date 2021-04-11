@@ -3,16 +3,26 @@
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1em;
+  padding: 0 2em;
+  /* border: 1px solid #000; */
 }
 
-nav {
-  padding: 1em 5em;
+.logo {
+  /* border: 1px solid #000; */
+}
+
+
+.nav_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* display: flex;
+  flex-flow: row; */
   display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
+  /* border: 1px solid darkgreen; */
 }
 
-Link {
-  padding: 1em;
+.nav_item {
+  padding: 8px;
+  /* border: 1px solid red; */
 }
