@@ -5,7 +5,7 @@ import './style.css';
 const Footer = () => {
   return (
     <section className="footer">
-      <p>2020 Party Bee</p>
+      <p>© 2021 Party Llama</p>
       <div className="social">
         <FontAwesomeIcon icon={["far", "coffee"]} />
         <FontAwesomeIcon icon={["fab", "instagram"]} />

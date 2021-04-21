@@ -29,7 +29,7 @@ const ContactUs = () => {
     <section className="contact-us">
       <h2>Contact Us</h2>
       <form className="contact-us-form" onSubmit={handleSubmit}>
-        <label for="name">Name</label>
+        <label for="name" className="name-label">Name</label>
         <input 
           name="name" 
           id="name"
@@ -47,9 +47,10 @@ const ContactUs = () => {
           onChange={e => setEmail(e.target.value)} 
         />
 
-        <label for="email">Interest</label>
+        <label for="interest">Interest</label>
         <input 
           name="interest" 
+          id="interest"
           type="text" 
           value={interest} 
           onChange={e => setInterest(e.target.value)} 
@@ -73,7 +74,7 @@ const ContactUs = () => {
           rows="5"
         />
 
-        <button type="submit">Submit</button>
+        <button className="submit_button" type="submit">Submit</button>
       </form>
     </section>
   );

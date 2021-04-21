@@ -4,12 +4,39 @@
   justify-content: space-between;  
   width: 450px;
   max-width: 80%;
-  padding: 3em;
+  padding: 1.2em;
   border-radius: 25px;
   box-shadow: 0 0 5px lightgrey;
 }
 
 label {
-  text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+
+label:hover {
+  text-shadow: 1px 1px 5px #fff, 2px 2px 5px gold;
+}
+
+label {
+  transition: ;
+}
+
+.submit_button,
+#name,
+#email,
+#date,
+#interest,
+#message {
+  transition: background-color .5s;
+}
+
+#name:focus { background-color: #86E3CE; }
+#email:focus { background-color: #D0E6A5; }
+#interest:focus { background-color: #FFDD94; }
+#date:focus { background-color: #fa897a; }
+#message:focus { background-color:  #CCABDa; }
+
+.submit_button:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
