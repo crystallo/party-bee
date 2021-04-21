@@ -1,9 +1,10 @@
-const Card = ({ image, name }) => {
+const Card = ({ item }) => {
   return (
     <div class="card">
-      <div class="card_image">{image}</div>
-      <div class="name">{name}</div>
-      <button>Detail</button>
+      <div className="card_image">{item.image}</div>
+      <div className="card_name">{item.name}</div>
+      <div className="card_price">{item.price}</div>"
+      <button className="card_button">Detail</button>
     </div>
   )
 }

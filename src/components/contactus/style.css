@@ -17,10 +17,6 @@ label:hover {
   text-shadow: 1px 1px 5px #fff, 2px 2px 5px gold;
 }
 
-label {
-  transition: ;
-}
-
 .submit_button,
 #name,
 #email,
@@ -30,11 +26,11 @@ label {
   transition: background-color .5s;
 }
 
-#name:focus { background-color: #86E3CE; }
-#email:focus { background-color: #D0E6A5; }
-#interest:focus { background-color: #FFDD94; }
-#date:focus { background-color: #fa897a; }
-#message:focus { background-color:  #CCABDa; }
+#name:hover, #name:focus { background-color: #86E3CE; }
+#email:hover, #email:focus { background-color: #D0E6A5; }
+#interest:hover, #interest:focus { background-color: #FFDD94; }
+#date:hover, #date:focus { background-color: #fa897a; }
+#message:hover, #message:focus { background-color:  #CCABDa; }
 
 .submit_button:hover {
   background-color: lightblue;

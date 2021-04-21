@@ -1,10 +1,7 @@
 import './App.css';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -22,16 +19,16 @@ function App() {
     <Router>
       <Header />
       <Switch>
-      <Route path={ROUTES.ABOUT}>
+        <Route path={ROUTES.ABOUT} >
             <About />
-          </Route>
-          <Route path={ROUTES.CONTACTUS}>
-            <ContactUs />
-          </Route>
-          <Route path={ROUTES.FAQS}>
-            <Faqs />
-          </Route>
-        </Switch>
+        </Route>
+        <Route path={ROUTES.CONTACTUS}>
+          <ContactUs />
+        </Route>
+        <Route path={ROUTES.FAQS}>
+          <Faqs />
+        </Route>
+      </Switch>
       <Footer />
     </Router>
   );
