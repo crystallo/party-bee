@@ -1,4 +1,4 @@
-const Card = ({ item }) => {
+ const Card = ({ item }) => {
   return (
     <div class="card">
       <div className="card_image">{item.image}</div>
@@ -8,3 +8,5 @@ const Card = ({ item }) => {
     </div>
   )
 }
+
+export default Card;

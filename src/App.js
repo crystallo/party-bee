@@ -12,6 +12,10 @@ import About from './components/about';
 import Footer from './components/footer';
 import * as ROUTES from './constants/routes';
 
+import Collections from './pages/collections';
+
+// const Collections = lazy(() => import('./pages/collections'));
+
 library.add(fab);
 
 function App() {
@@ -20,7 +24,10 @@ function App() {
       <Header />
       <Switch>
         <Route path={ROUTES.ABOUT} >
-            <About />
+          <About />
+        </Route>
+        <Route path={ROUTES.COLLECTIONS}>
+          <Collections />
         </Route>
         <Route path={ROUTES.CONTACTUS}>
           <ContactUs />
