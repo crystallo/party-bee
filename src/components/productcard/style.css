@@ -1,0 +1,12 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 0 5px lightgrey;
+  padding: .75em;
+}
+
+.pc_button {
+  margin: .5em 0 0;
+  padding: .25em;
+}

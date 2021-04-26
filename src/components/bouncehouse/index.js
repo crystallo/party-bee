@@ -1,12 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router'
 
-export const BounceHouse = () => {
-  const [id, setID] = useState('')
-  const [name, setName] = useState('')
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
-  const [depth, setDepth] = useState(0)
-  const [price, setPrice] = useState(0.00)
-  const [description, setDescription] = useState('')
-  const [pictures, setPictures] = useState([])
+import { getBounceHouseByID } from '../../services/firebase';
+
+export default function BounceHouse() {
+  const {productID} = useParams();
+  const [bounceHouse, setBounceHouse] = useState(null);
+
+  useEffect(async () => {
+    const bounceHouse = await getBounceHouseByID(productID);
+    console.log("bouncehouse: ", bounceHouse[0]);
+    setBounceHouse(bounceHouse[0]);
+  }, []);
+
+  return (
+    <section className="bouncehouse">
+      { bounceHouse ? (
+        <div className="bh-card">
+          <h1>{bounceHouse.name}</h1>
+          <p>Name: </p>
+          <p>Price: </p>
+          <p>Dimension: </p>
+          <p>Description: </p>
+        </div>
+      ) : (<h1>Loading ... </h1>)}
+      
+    </section>
+  )
 }
