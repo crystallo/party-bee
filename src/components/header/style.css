@@ -8,9 +8,23 @@
 }
 
 .logo {
-  /* border: 1px solid #000; */
+  width: 100px;
 }
 
+.title_text {
+  font-weight: 700;
+  margin: 0 .20em;
+  font-size: 2em;
+  text-shadow: 2px 2px 3px #fae75a, 
+  3px 3px 2px #b7adff;
+}
+
+.title_container {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: .5em 0 0;
+}
 
 .nav_list {
   list-style: none;

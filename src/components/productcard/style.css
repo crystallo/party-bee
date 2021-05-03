@@ -8,5 +8,14 @@
 
 .pc_button {
   margin: .5em 0 0;
-  padding: .25em;
+  padding: .50em;
+  background-color: gold;
+  /* border: 1px solid #000; */
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pc_title {
+  font-weight: 700;
 }
