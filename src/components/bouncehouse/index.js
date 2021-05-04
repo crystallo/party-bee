@@ -7,10 +7,12 @@ export default function BounceHouse() {
   const {productID} = useParams();
   const [bounceHouse, setBounceHouse] = useState(null);
 
-  useEffect(async () => {
-    const bounceHouse = await getBounceHouseByID(productID);
-    console.log("bouncehouse: ", bounceHouse[0]);
-    setBounceHouse(bounceHouse[0]);
+  useEffect(() => {
+    async function fetchBounceHouse() {
+      const bouncehouse = await getBounceHouseByID(productID);
+      setBounceHouse(bouncehouse);
+    }
+    fetchBounceHouse();
   }, []);
 
   return (

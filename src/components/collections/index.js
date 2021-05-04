@@ -20,7 +20,7 @@ export default function Collections() {
       <div className="collections_grid">
         { bounceHouses ? (
           bounceHouses.map((item) => (
-            <ProductCard item={item} />
+            <ProductCard item={item} key={item.id} />
           ))
         ) : (<h1>Loading ... </h1>) }
       </div>
