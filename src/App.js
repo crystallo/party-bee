@@ -2,8 +2,9 @@ import './App.css';
 
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import Header from './components/header';
 import ContactUs from './components/contactus';
@@ -16,6 +17,7 @@ import * as ROUTES from './constants/routes';
 // const Collections = lazy(() => import('./pages/collections'));
 
 library.add(fab);
+library.add(fas);
 
 function App() {
   return (

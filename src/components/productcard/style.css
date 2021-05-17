@@ -2,8 +2,17 @@
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  box-shadow: 0 0 5px lightgrey;
-  padding: .75em;
+  box-shadow: 0 0 5px #ddd;
+  padding: 1.95em;
+
+}
+
+.pc_image_image {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 15px;
+  padding: .25em;
 }
 
 .pc_button {
@@ -14,8 +23,19 @@
   border-radius: 10px;
   text-align: center;
   font-weight: 700;
+  transition: background-color .5s;
+}
+
+.pc_button:hover,
+.pc_button:active {
+  background-color: #86E3CE;
 }
 
 .pc_title {
+  padding: .25em;
   font-weight: 700;
+}
+
+.pc_price {
+  padding: .25em;
 }

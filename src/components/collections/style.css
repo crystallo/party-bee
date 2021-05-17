@@ -4,6 +4,6 @@
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.25em;
+  gap: 3em;
   grid-auto-flow: dense;
 }

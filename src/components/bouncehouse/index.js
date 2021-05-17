@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router'
 
 import { getBounceHouseByID } from '../../services/firebase';
+import Features from './features';
+import './style.css'
 
 export default function BounceHouse() {
   const {productID} = useParams();
@@ -13,17 +15,25 @@ export default function BounceHouse() {
       setBounceHouse(bouncehouse);
     }
     fetchBounceHouse();
+    console.log(bounceHouse)
   }, []);
 
   return (
     <section className="bouncehouse">
       { bounceHouse ? (
         <div className="bh-card">
-          <h1>{bounceHouse.name}</h1>
-          <p>Name: </p>
-          <p>Price: </p>
-          <p>Dimension: </p>
-          <p>Description: </p>
+          <div class="bh-card_pictures">
+
+          </div>
+          <div className="bh-card_info">
+            <h1>{bounceHouse.name}</h1>
+            { bounceHouse.description ? (<p>Description: {bounceHouse.description}</p>) : null }
+            <p>Price: </p>
+            <p>Dimension(ft): {bounceHouse.width} x {bounceHouse.length}</p>
+          </div>
+          { bounceHouse.features ? (
+            <Features features={bounceHouse.features} />
+          ) : null}
         </div>
       ) : (<h1>Loading ... </h1>)}
       
