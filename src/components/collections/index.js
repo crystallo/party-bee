@@ -8,9 +8,12 @@ import './style.css';
 export default function Collections() {
   const [bounceHouses, setBounceHouses] = useState(null);
 
-  useEffect(async () => {
-    const bouncehouses = await getBounceHouses();
-    setBounceHouses(bouncehouses);
+  useEffect(() => {
+    async function fetchData() {
+      const bouncehouses = await getBounceHouses();
+      setBounceHouses(bouncehouses);
+    }
+    fetchData();
   }, []);
 
   return (

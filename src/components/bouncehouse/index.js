@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router'
+import { useParams } from 'react-router';
+import SimpleImageSlider from "react-simple-image-slider";
 
 import { getBounceHouseByID } from '../../services/firebase';
 import Features from './features';
@@ -8,6 +9,7 @@ import './style.css'
 export default function BounceHouse() {
   const {productID} = useParams();
   const [bounceHouse, setBounceHouse] = useState(null);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     async function fetchBounceHouse() {
